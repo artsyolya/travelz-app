@@ -35,6 +35,7 @@ body {
   height: 100vh;
   background-color: var(--color-light-sand-grey);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .app-title {
   display: flex;
@@ -72,6 +73,7 @@ h2 {
   background-color: var(--color-sand);
   border-radius: 10px;
   box-shadow: 4px 4px 0px var(--color-dark-blue);
+  overflow-x: hidden;
 }
 .form.hidden {
   transform: translateY(-30rem);
