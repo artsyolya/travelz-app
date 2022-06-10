@@ -248,7 +248,7 @@ class App {
     if (!data) {
       console.log("No data to load");
       let html = `
-          <p class="load-travels__message">...<br>Looks like you haven't added any travel memories yet.<br>...</p>`;
+          <p class="load-travels__message">...<br>Looks like you haven't added any travel memories yet.<br><br>Click on the map to start.<br>...</p>`;
       loadTravelsContainer.insertAdjacentHTML("afterbegin", html);
       return;
     }
