@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Shadows+Into+Light&family=Square+Peg&display=swap");
+
+:root {
+  --color-light-sand-grey: #cecece;
+  --color-sand: #fffae8;
+  --color-pink: #fec3bc;
+  --color-tomato-red: #fc7465;
+  --color-teal: #0edab8;
+  --color-light-blue: #abd3df;
+  --color-berry-blue: #84a7db;
+  --color-dark-blue: #6681a9;
+  --color-dark-gold-transparent: rgba(122, 111, 69, 0.5);
+}
+
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+}
+#map {
+  width: 75%;
+  height: 100vh;
+  background-color: var(--color-light-blue);
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  background-color: var(--color-light-sand-grey);
+  overflow-y: auto;
+}
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 0 20px;
+}
+.logo {
+  width: 60px;
+  height: 50px;
+  padding-right: 10px;
+}
+h1 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: "Square Peg", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 100;
+  text-transform: lowercase;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -5px;
+}
+
+/* Form styling */
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  margin: 0 20px 8px 20px;
+  padding: 20px 25px;
+  background-color: var(--color-sand);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px var(--color-dark-blue);
+}
+.form.hidden {
+  transform: translateY(-30rem);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  opacity: 0;
+}
+.form__row {
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+.form__row-img {
+  width: 270px;
+}
+.form__label,
+.form__input,
+.form__img-upload,
+.form__submit {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.form__label {
+  margin-right: 10px;
+  font-weight: 400;
+  flex: 0 0 30%;
+}
+.form__input {
+  font-weight: 300;
+  border: none;
+  background-color: var(--color-pink);
+  border-radius: 3px;
+  height: 2.5rem;
+  width: 100%;
+  padding: 5px;
+}
+.form__img-upload {
+  font-weight: 300;
+  margin-top: 10px;
+}
+.form__img-upload::file-selector-button {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 130px;
+  margin: 0 10px 5px 0;
+  background-color: var(--color-pink);
+  color: black;
+  /* box-shadow: 2px 2px 2px var(--color-dark-gold-transparent); */
+  box-shadow: 4px 4px 0px var(--color-dark-blue);
+  cursor: pointer;
+}
+.form__submit {
+  width: 100px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-berry-blue);
+  color: white;
+  font-weight: 500;
+  /* box-shadow: 2px 2px 2px var(--color-dark-gold-transparent); */
+  box-shadow: 4px 4px 0px var(--color-dark-blue);
+  cursor: pointer;
+}
+.form__img-upload::file-selector-button:hover,
+.form__submit:hover,
+.delete-travels__btn:hover {
+  background-color: var(--color-teal);
+  box-shadow: 4px 4px 0px var(--color-pink);
+  color: black;
+}
+
+/* Load & delete travel memories list */
+.load-travels,
+.delete-travels {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+}
+.delete-travels {
+  margin: 25px 0 50px 0;
+}
+.load-travels__message {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.delete-travels__btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--color-tomato-red);
+  border: none;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 2px var(--color-dark-gold-transparent); */
+  box-shadow: 4px 4px 0px var(--color-dark-blue);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Travel memories list items styling */
+.travel-memory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-sand);
+  margin: 12px 20px;
+  border: 5px dashed var(--color-tomato-red);
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 2px var(--color-dark-gold-transparent); */
+  box-shadow: 4px 4px 0px var(--color-dark-blue);
+}
+.list-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.list-item__info {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 3px 0;
+}
+.list-item__info span {
+  padding-right: 5px;
+}
+.list-item__details {
+  width: 185px;
+  padding: 5px 10px 5px 38px;
+  background: var(--color-pink);
+  background: linear-gradient(
+    0deg,
+    rgba(252, 116, 101, 1) 0%,
+    rgba(255, 155, 144, 1) 19%,
+    rgba(254, 195, 188, 1) 40%,
+    rgba(254, 195, 188, 1) 60%,
+    rgba(255, 155, 144, 1) 90%,
+    rgba(252, 116, 101, 1) 100%
+  );
+  border-radius: 0 40px 40px 0;
+  margin-left: -24px;
+  box-shadow: 0px 0px 8px var(--color-dark-gold-transparent);
+}
+.list-item__img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  padding: 4px 8px;
+  margin-right: 8px;
+  border-radius: 20px;
+}
+
+/* Leaflet map & its functions styling */
+/* Popup width is defined in JS using options */
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: white;
+  padding-right: 0;
+}
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem;
+}
+.leaflet-popup-content {
+  margin: 0;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+}
+.leaflet-popup .leaflet-popup-tip {
+  background-color: white;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  color: white;
+  font-size: 2.5rem;
+  top: -6px;
+}
+.popup-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid white;
+  border-bottom: 15px solid white;
+}
+
+/* Other general styling */
+.hidden {
+  display: none;
+}
